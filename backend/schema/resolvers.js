@@ -43,7 +43,7 @@ const resolvers = {
             return shipments.find(s => s.id === id);
         },
 
-        user: (_, __, context) => {
+        me: (_, __, context) => {
             if (!context.user) return null;
             return users.find(u => u.id === context.user.id);
         }
