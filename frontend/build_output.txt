@@ -1,0 +1,28 @@
+
+> frontend@0.0.0 build
+> vite build
+
+vite v7.3.1 building client environment for production...
+transforming...
+✓ 2267 modules transformed.
+✗ Build failed in 804ms
+error during build:
+src/Dashboard.jsx (2:9): "useQuery" is not exported by "node_modules/@apollo/client/core/index.js", imported by "src/Dashboard.jsx".
+file: /Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/src/Dashboard.jsx:2:9
+
+1: import React, { useState } from 'react';
+2: import { useQuery, gql } from '@apollo/client';
+            ^
+3: import {
+4:     Search,
+
+    at getRollupError (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:17037:16)
+    at Module.traceVariable (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:17449:29)
+    at ModuleScope.findVariable (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:15067:39)
+    at ReturnValueScope.findVariable (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionBodyScope.findVariable (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at Identifier.bind (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5447:40)
+    at CallExpression.bind (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:2829:23)
+    at CallExpression.bind (file:///Users/nishmitha/Documents/GitHub/transportation-management-system/frontend/node_modules/rollup/dist/es/shared/node-entry.js:12179:15)

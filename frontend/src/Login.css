@@ -1,0 +1,45 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+
+.login-card {
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary);
+}
+
+.logo-large h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.full-width {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.error-msg {
+    color: var(--danger);
+    background: rgba(239, 68, 68, 0.1);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+}
