@@ -183,6 +183,7 @@ const ShipmentsPage = ({ user }) => {
           shipment={selectedShipment}
           onClose={handleCloseDetail}
           onEdit={handleEditClick}
+          user={user}
         />
       )}
 

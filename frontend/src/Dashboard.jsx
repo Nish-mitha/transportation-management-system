@@ -193,11 +193,11 @@ const Dashboard = ({ user }) => {
                                 <th>Status</th>
                                 <th onClick={() => handleSort('shipperName')} style={{ cursor: 'pointer' }}>Customer <SortIcon field="shipperName" /></th>
                                 <th onClick={() => handleSort('carrierName')} style={{ cursor: 'pointer' }}>Carrier <SortIcon field="carrierName" /></th>
-                                <th onClick={() => handleSort('pickupLocation')} style={{ cursor: 'pointer' }}>Origin <SortIcon field="pickupLocation" /></th>
-                                <th onClick={() => handleSort('deliveryLocation')} style={{ cursor: 'pointer' }}>Destination <SortIcon field="deliveryLocation" /></th>
-                                <th onClick={() => handleSort('rate')} style={{ cursor: 'pointer' }}>Cost <SortIcon field="rate" /></th>
-                                <th onClick={() => handleSort('estimatedDelivery')} style={{ cursor: 'pointer' }}>Date <SortIcon field="estimatedDelivery" /></th>
-                                <th>Actions</th>
+                                <th>Origin <SortIcon field="pickupLocation" /></th>
+                                <th>Destination <SortIcon field="deliveryLocation" /></th>
+                                <th>Cost <SortIcon field="rate" /></th>
+                                <th>Date <SortIcon field="estimatedDelivery" /></th>
+                                {user?.role === 'ADMIN' && <th>Actions</th>}
                             </tr>
                         </thead>
                         <tbody>

@@ -2,7 +2,7 @@ import React from 'react';
 import { X, MapPin, Calendar, Truck, Package, DollarSign, User, AlertCircle, Clock } from 'lucide-react';
 import './ShipmentDetail.css';
 
-const ShipmentDetail = ({ shipment, onClose, onEdit }) => {
+const ShipmentDetail = ({ shipment, onClose, onEdit, user }) => {
   if (!shipment) return null;
 
   return (
@@ -109,7 +109,9 @@ const ShipmentDetail = ({ shipment, onClose, onEdit }) => {
 
         <div className="detail-footer">
           <button className="btn btn-secondary" onClick={onClose}>Close</button>
-          <button className="btn btn-primary" onClick={() => onEdit(shipment)}>Edit Shipment</button>
+          {user?.role === 'ADMIN' && (
+            <button className="btn btn-primary" onClick={() => onEdit(shipment)}>Edit Shipment</button>
+          )}
         </div>
       </div>
 
