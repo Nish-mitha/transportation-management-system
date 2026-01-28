@@ -23,6 +23,7 @@ const server = new ApolloServer({
     cache: 'bounded',
 });
 
-server.listen().then(({ url }) => {
+server.listen().then(({ url, server: httpServer }) => {
+    httpServer.timeout = 25000;
     console.log(`🚀  Server ready at ${url}`);
 });
