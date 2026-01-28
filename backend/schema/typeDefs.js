@@ -38,6 +38,7 @@ const typeDefs = gql`
     IN_TRANSIT
     DELIVERED
     CANCELLED
+    DELAYED
   }
 
   # Inputs for Filtering and Sorting
