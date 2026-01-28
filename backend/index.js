@@ -3,6 +3,7 @@ const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema/typeDefs');
 const resolvers = require('./schema/resolvers');
 const { verifyToken } = require('./utils/auth');
+const loggingPlugin = require('./utils/logger');
 
 const context = ({ req }) => {
     const token = req.headers.authorization || '';
@@ -19,6 +20,7 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     context,
+    plugins: [loggingPlugin],
     csrfPrevention: true,
     cache: 'bounded',
 });
